@@ -208,20 +208,15 @@ const funnyTexts = [
     "Все равно поймаю 😎"
 ];
 
-noBtn.style.position = "absolute";
-
 noBtn.addEventListener("mouseover", () => {
 
     const area = document.querySelector(".buttons");
 
     const maxX = area.offsetWidth - noBtn.offsetWidth;
-    const maxY = 120;
 
     const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
 
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+    noBtn.style.transform = `translateX(${x - maxX/2}px)`;
 
     noClicks++;
 
@@ -230,6 +225,7 @@ noBtn.addEventListener("mouseover", () => {
     }
 
     yesBtn.style.transform = `scale(${1 + noClicks * 0.08})`;
+
 });
 
 // ==========================
