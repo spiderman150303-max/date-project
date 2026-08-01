@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#09090f,#111827,#1d4ed8,#7c3aed);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:0;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    color:rgba(255,255,255,.4);
+    animation:float linear infinite;
+    user-select:none;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:2;
+}
+
+.page{
+    display:none;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+}
+
+.page.active{
+    display:flex;
+    animation:fade .8s;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.card{
+
+width:92%;
+max-width:430px;
+
+padding:35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:28px;
+
+box-shadow:0 15px 45px rgba(0,0,0,.35);
+
+text-align:center;
+
+color:white;
+
+}
+
+h1,h2{
+
+margin-bottom:20px;
+
+}
+
+p{
+
+line-height:1.7;
+
+opacity:.9;
+
+margin-bottom:30px;
+
+}
+
+input{
+
+width:100%;
+
+margin:10px 0;
+
+padding:16px;
+
+border-radius:15px;
+
+border:none;
+
+outline:none;
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+input::placeholder{
+
+color:rgba(255,255,255,.7);
+
+}
+
+button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4f8b;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px rgba(255,79,139,.6);
+
+}
+
+/* Кнопки Да / Нет */
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:25px;
+    position:relative;
+}
+
+.buttons button{
+    width:160px;
+}
+
+/* Экран загрузки */
+
+#typingText{
+    min-height:80px;
+    font-size:18px;
+    line-height:1.7;
+    margin-top:20px;
+}
+
+#loadingTitle{
+    margin-bottom:15px;
+}
+
+/* Финальный экран */
+
+#success h1{
+    font-size:70px;
+    margin-bottom:20px;
+    animation:pop 1s infinite alternate;
+}
+
+@keyframes pop{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.1);
+}
+
+}
+
+#finalText{
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-top:20px;
+
+}

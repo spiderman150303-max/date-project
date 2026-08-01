@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Для тебя ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<div class="container">
+
+<section id="welcome" class="page active">
+
+<div class="card">
+
+<h1>❤️ Привет</h1>
+
+<p>
+
+Мне нужно задать тебе несколько вопросов.
+
+<br><br>
+
+Обещаю, это займет меньше минуты 😊
+
+</p>
+
+<button id="startBtn">
+
+Начать
+
+</button>
+
+</div>
+
+</section>
+
+<section id="form" class="page">
+
+<div class="card">
+
+<h2>Давай познакомимся 😊</h2>
+
+<input id="name" placeholder="Как тебя зовут?">
+
+<input id="date" type="date">
+
+<input id="time" type="time">
+
+<input id="place" placeholder="Куда хотела бы пойти?">
+
+<button id="nextBtn">
+
+Продолжить ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Экран загрузки -->
+
+<section id="loading" class="page">
+
+    <div class="card">
+
+        <h2 id="loadingTitle">Подготовка...</h2>
+
+        <p id="typingText"></p>
+
+    </div>
+
+</section>
+
+<!-- Главный вопрос -->
+
+<section id="question" class="page">
+
+    <div class="card">
+
+        <h1>❤️</h1>
+
+        <h2 id="questionName"></h2>
+
+        <p>
+
+            Ты пойдешь со мной на свидание?
+
+        </p>
+
+        <div class="buttons">
+
+            <button id="yesBtn">
+
+                Да ❤️
+
+            </button>
+
+            <button id="noBtn">
+
+                Нет 🙈
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Финальный экран -->
+
+<section id="success" class="page">
+
+    <div class="card">
+
+        <h1>🎉</h1>
+
+        <h2>Спасибо ❤️</h2>
+
+        <p id="finalText">
+
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
