@@ -28,6 +28,7 @@ body{
     height:100%;
     overflow:hidden;
     z-index:0;
+    pointer-events:none;
 }
 
 .heart{
@@ -62,6 +63,7 @@ opacity:0;
     justify-content:center;
     align-items:center;
     z-index:2;
+    position:relative;
 }
 
 .page{
@@ -190,58 +192,17 @@ box-shadow:0 0 25px rgba(255,79,139,.6);
 }
 
 /* Кнопки Да / Нет */
-
-.buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    margin-top:25px;
-    position:relative;
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 25px;
 }
 
-.buttons button{
-    width:160px;
-}
-
-/* Экран загрузки */
-
-#typingText{
-    min-height:80px;
-    font-size:18px;
-    line-height:1.7;
-    margin-top:20px;
-}
-
-#loadingTitle{
-    margin-bottom:15px;
-}
-
-/* Финальный экран */
-
-#success h1{
-    font-size:70px;
-    margin-bottom:20px;
-    animation:pop 1s infinite alternate;
-}
-
-@keyframes pop{
-
-from{
-transform:scale(1);
-}
-
-to{
-transform:scale(1.1);
-}
-
-}
-
-#finalText{
-
-font-size:18px;
-
-line-height:1.8;
-
-margin-top:20px;
-
+.buttons button {
+    width: 140px !important;
+    flex: 0 0 140px;
+    margin-top: 0;
 }
