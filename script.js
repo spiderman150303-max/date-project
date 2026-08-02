@@ -234,6 +234,18 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
 
+    fetch("https://blue-band-7090.spiderman150303.workers.dev", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: user.name,
+        date: user.date,
+        time: user.time,
+        place: user.place
+    })
+});
     finalText.innerHTML = `
         <h1>❤️ Урааа!!! ❤️</h1>
 
